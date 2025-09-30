@@ -1,8 +1,8 @@
 
-from tkinterdnd2 import TkinterDnD
+import tkinter as tk
 from app import PDFMergerApp
 
 if __name__ == "__main__":
-    root = TkinterDnD.Tk()
+    root = tk.Tk()
     app = PDFMergerApp(root)
     root.mainloop()

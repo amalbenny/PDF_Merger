@@ -1,7 +1,6 @@
 
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
-from tkinterdnd2 import DND_FILES
 from toolkit import add_pdfs, remove_selected, move_up, move_down, update_listbox, merge_pdfs
 from PyPDF2 import PdfMerger
 
@@ -10,17 +9,15 @@ class PDFMergerApp:
     def __init__(self, master):
         self.master = master
         self.master.title("PDF Merger Tool")
-        self.master.geometry("500x475")
+        self.master.geometry("600x500")
         self.pdf_list = []
         # Use tkinterdnd2 Listbox for drag-and-drop
         self.listbox = tk.Listbox(master, width=60, height=15)
         self.listbox.pack(pady=10)
-        self.listbox.drop_target_register(DND_FILES)
-        self.listbox.dnd_bind('<<Drop>>', self.on_drop)
 
         # Progress bar
         self.progress = tk.DoubleVar()
-        self.progress_bar = tk.ttk.Progressbar(master, variable=self.progress, maximum=100)
+        self.progress_bar = ttk.Progressbar(master, variable=self.progress, maximum=100)
         self.progress_bar.pack(fill='x', padx=10, pady=5)
 
         btn_frame = tk.Frame(master)
@@ -30,8 +27,6 @@ class PDFMergerApp:
         tk.Button(btn_frame, text="Move Up", command=lambda: move_up(self)).grid(row=1, column=0, padx=5, pady=5)
         tk.Button(btn_frame, text="Move Down", command=lambda: move_down(self)).grid(row=1, column=1, padx=5, pady=5)
         tk.Button(btn_frame, text="Merge PDFs", command=self.merge_pdfs_with_progress, bg="green", fg="white").grid(row=2, column=0, columnspan=2, pady=10)
-
-    # ...existing code...
 
     def merge_pdfs_with_progress(self):
         if not self.pdf_list:
