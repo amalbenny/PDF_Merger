@@ -15,6 +15,26 @@ A simple desktop application to merge multiple PDF files using a graphical user 
 - Python 3.x
 - PyPDF2 (install via pip)
 - Tkinter (usually included with Python, but may require system installation on Linux)
+## Usage
+To Run the application:
+1. Clone the repo
+
+2. 
+   - **If Linux**:
+
+       Run as a program:
+       ```bash
+       run.sh
+       ```
+   - **If Windows OS**:
+
+       Execute file :
+       ```bash
+       run.bat
+       ```
+
+A window will open where you can add, remove, reorder, and merge PDF files.
+
 
 ## Installation
 
@@ -35,19 +55,17 @@ A simple desktop application to merge multiple PDF files using a graphical user 
    ```bash
    sudo apt-get install python3-tk
    ```
-
-## Usage
-Run the application:
-- Clone the repo
-
-- **If Linux**:
-
-   Run as a program:
-   ```bash
-   run.sh
+### Windows - Developer
+1. **Clone the repository or download the source files.**
+2. **Create a virtual environment (recommended):**
+   ```cmd
+   python -m venv .venv
+   .venv\Scripts\activate
    ```
-
-A window will open where you can add, remove, reorder, and merge PDF files.
+3. **Install dependencies:**
+   ```cmd
+   pip install -r requirements.txt
+   ```
 
 ## File Structure
 - `__main__.py`: Entry Point to the App

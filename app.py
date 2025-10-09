@@ -11,7 +11,6 @@ class PDFMergerApp:
         self.master.title("PDF Merger Tool")
         self.master.geometry("600x500")
         self.pdf_list = []
-        # Use tkinterdnd2 Listbox for drag-and-drop
         self.listbox = tk.Listbox(master, width=60, height=15)
         self.listbox.pack(pady=10)
 
