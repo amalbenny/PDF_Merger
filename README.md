@@ -3,6 +3,7 @@
 A simple desktop application to merge multiple PDF files using a graphical user interface (GUI) built with Tkinter and PyPDF2.
 ![PDF_Merger App For Ubuntu](assets/Ubuntu_PDFM.png)
 ![PDF Merger App For Windows](assets/pdf_merger.png)
+
 ## Features
 - Add multiple PDF files to a list
 - Remove selected PDFs from the list
@@ -14,7 +15,6 @@ A simple desktop application to merge multiple PDF files using a graphical user 
 - Python 3.x
 - PyPDF2 (install via pip)
 - Tkinter (usually included with Python, but may require system installation on Linux)
-- TkinterDnD2 (install via pip)
 
 ## Installation
 
@@ -30,21 +30,30 @@ A simple desktop application to merge multiple PDF files using a graphical user 
    pip install -r requirements.txt
    ```
 4. **If you get errors about Tkinter, install it via your system package manager:**
+   
+   e.g. :
    ```bash
    sudo apt-get install python3-tk
    ```
 
 ## Usage
 Run the application:
-```bash
-python __main__.py
-```
+- Clone the repo
+
+- **If Linux**:
+
+   Run as a program:
+   ```bash
+   run.sh
+   ```
 
 A window will open where you can add, remove, reorder, and merge PDF files.
 
 ## File Structure
-- `__main__.py`: Main application code
+- `__main__.py`: Entry Point to the App
 - `requirements.txt`: Python dependencies
+- `app.py`: App GUI
+- `toolkit.py`: Various Features In The App
 
 ## Testing
 Unit tests for core functionalities are provided in `test_toolkit.py`.

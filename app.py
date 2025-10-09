@@ -1,7 +1,7 @@
 
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
-from toolkit import add_pdfs, remove_selected, move_up, move_down, update_listbox, merge_pdfs
+from toolkit import add_pdfs, remove_selected, move_up, move_down
 from PyPDF2 import PdfMerger
 
 
